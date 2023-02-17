@@ -5,7 +5,7 @@
 (https://github.com/katmfrl/)👍
 
 
-1.company http://www.naver.com
+1.company https://katmfrl.github.io/2023myhome/01site
 1. 반갑습니다.
     - 하이
 
