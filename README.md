@@ -1,11 +1,11 @@
-# 2023myhome
+# my homepage
 ## h2
 ### h3
 
-[권슬기](https://github.com/katmfrl/)👍
+(https://github.com/katmfrl/)👍
 
 
-1. myhome http://www.naver.com
+1.company http://www.naver.com
 1. 반갑습니다.
     - 하이
 
@@ -16,3 +16,4 @@
 
 ```css
 div.box{width:100px}
+```
