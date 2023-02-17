@@ -5,3 +5,8 @@
 
 header{width: 1000px;
 margin: 0 auto;}
+
+.visual{
+    width: 1000px;
+    border: 1px solid red;
+}
