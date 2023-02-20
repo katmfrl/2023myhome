@@ -18,7 +18,7 @@ a:link,a:visited{
 /* header  */
 
 .top{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
 }
 .subMenu{
@@ -61,7 +61,7 @@ h1.logo {
 
 h1 img{display: block;}
 
-#hd .bottom{}
+
 
 
 
