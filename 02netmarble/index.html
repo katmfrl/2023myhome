@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>netmarble</title>
+    <title>Netmarble</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/jquery.bxslider.css"> -->
 </head>
 <body>
     <header class = "hd"> <!--postion : fixed-->
-        <nav class="navWrap container">
+        <nav class="navWrap container clearfix">
             <h1><a href="#"><img src="images/main/net_logo.png" alt=""></a></h1>
             <nav class="gnb menuFont">
                 <ul class ="clearfix">
@@ -24,7 +25,131 @@
         </nav>
     </header>
     <div class="slideWrap">
-        
+        <ul class="slide">
+            <li style="background:url(images/main/banner01.jpg) no-repeat;" class="sItem">
+                <div class="txtWrap container">
+                    <div class="txtMenu">
+                        <h3>게임소통학교</h3>
+                        <p>게임으로 소통하고 게임으로 가까워지는 가족</p>
+                    </div>
+                </div>
+            </li>
+            <li style="background:url(images/main/banner02.jpg) no-repeat;" class="sItem">
+                <div class="txtWrap container">
+                    <div class="txtMenu">
+                        <h3>전국 장애학생<br>e페스티벌</h3>
+                        <p>게임 안에서 하나되는 모두의 축제</p>
+                    </div>
+                </div>
+            </li>
+            <li style="background:url(images/main/banner03.jpg) no-repeat;" class="sItem">
+                <div class="txtWrap container">
+                    <div class="txtMenu">
+                        <h3>견학 프로그램</h3>
+                        <p>나의 게임 산업 탐방기</p>
+                    </div>
+                </div>
+            </li>
+            <li style="background:url(images/main/banner04.jpg) no-repeat;" class="sItem">
+                <div class="txtWrap container">
+                    <div class="txtMenu">
+                        <h3>게임 아카데미</h3>
+                        <p>미래의 꿈 게임에 담다</p>
+                    </div>
+                </div>
+            </li>
+            <li style="background:url(images/main/banner05.jpg) no-repeat;" class="sItem">
+                <div class="txtWrap container">
+                    <div class="txtMenu">
+                        <h3>어깨동무문고</h3>
+                        <p>다름을 이해하는 모두의 동화</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slide_pager claerfix">
+            <a data-slide-index="0"></a>
+            <a data-slide-index="1"></a>
+            <a data-slide-index="2"></a>
+            <a data-slide-index="3"></a>
+            <a data-slide-index="4"></a>
+        </div>
     </div>
+    <section class="content">
+        <div class="conWrap container">
+            <div class="conLeft clearfix">
+                <h3>문화를 만들고 인재를 키우고<br>마음을 나눕니다</h3>           
+            </div>
+            <div class="conRight clearfix">
+                <h3>넷마블문화재단은 문화적 가치 확산을 통해 우리 사회의 미래 경쟁력을 높여 가고자<br>다양한 공익 활동을 전개해 나가고 있습니다.</h3>           
+            </div>
+        </div>
+    </section>
+    <div class="img container clearfix"></div>
+
+    <div class="visual">
+        <div class="vWrap container">
+            <div class="leftBox clearfix">
+                <h2>우리는 문화적 가치를 확산하여 우리 사회의<br>미래 경쟁력을 높여갑니다</h2>
+                <p>주요목적</p>
+            </div>
+            <div class="rightBox clearfix">
+                <h2><img src="images/main/purpose.e6f7b36.jpg" alt=""></h2>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class = "ft">
+        
+    </footer>
+
+
+
+    <script>
+
+    const img = [
+        'link01.jpg',
+        'link02.jpg',
+        'link03.jpg'
+    ]
+    const title = [
+        '문화 만들기',
+        '인재 키우기',
+        '마음 나누기'
+    ]
+    const text = [
+        '게임을 기반으로 다양한 문화적 가치를 공유하고 누구나<br> 즐겁게 참여할 수 있는 교육 및 여가 문화를 만들어 갑니다.',
+        '미래 문화 산업을 이끌어 갈 가능성이 있는 인재들을 발굴하고<br> 체계적인 성장 기회를 지원합니다.',
+        '나눔이 가진 영향력과 가치를 알리고  쉽게 동참할 수 있는<br> 기회를 제공하여 즐거운 나눔 문화를 확산해 갑니다.'
+    ]
+
+
+    let imgView = "";
+    for(let i=0;i<img.length;i++){
+        imgView += `<div class="imgView">
+                        <img src="images/main/${img[i]}" alt="">
+                        <div class="imgWrap">
+                            <h2>${title[i]}</h2>
+                            <p>${text[i]}</p>
+                        </div>
+                    </div>`;
+
+    }
+
+    console.log(imgView)
+    document.getElementsByClassName('img')[0].innerHTML = imgView;
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+    $(".slide").bxSlider({
+            auto:true,
+            controls:false,
+            pagerCustom:'.slide_pager'
+        });
+    </script>
+
 </body>
 </html>
