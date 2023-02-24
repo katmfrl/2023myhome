@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <!-- <link rel="stylesheet" href="css/jquery.bxslider.css"> -->
 </head>
 <body>
@@ -37,8 +39,8 @@
             <li style="background:url(images/main/banner02.jpg) no-repeat;" class="sItem">
                 <div class="txtWrap container">
                     <div class="txtMenu">
-                        <h3>전국 장애학생<br>e페스티벌</h3>
-                        <p>게임 안에서 하나되는 모두의 축제</p>
+                        <h3 class = >전국 장애학생<br>e페스티벌</h3>
+                        <p class = "txtGame">게임 안에서 하나되는 모두의 축제</p>
                     </div>
                 </div>
             </li>
@@ -99,9 +101,50 @@
         </div>
     </div>
 
+    <div class="notice">
+        <div class="nWrap container">
+            <div class="nTitle">
+                <h1>재단소식</h1>
+            </div>
+            <div class="nTab">
+                <button>공지사항</button>
+                <button>뉴스룸</button>
+                <button>소셜미디어</button>
+            </div>
+            <div class="swiper mySwiper container"> <!--스와이프-->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/main/" alt="">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer class = "ft">
-        
+            <div class="ftlogo container">
+                <a href="#"><img src="images/main/netft_logo.png" alt=""></a>
+            </div>
+            <div class = "copyright container clearfix">
+                서울특별시 구로구 디지털로26길 38, G-Tower 넷마블 <br>
+                Copyright©Netmarble Corp.All Rights Reserved.</div> <!--copyright-->
+            <nav class = "ftWrap">
+                <ul class = "ftMenu clearfix container"> <!--font-size 11px-->
+                    <li><a href="#">개인정보처리방침 <span>|</span></a></li>
+                    <li><a href="#">SNS 저작물 이용 동의서 <span>|</span></a></li>
+                    <li><a href="#">이메일 문의 <span>|</span></a></li>
+                    <li><a href="#">주무관청 <span>|</span></a></li>
+                    <li><a href="#">국세청</a></li>
+                </ul>
+            </nav>
     </footer>
 
 
