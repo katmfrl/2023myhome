@@ -18,11 +18,16 @@ body {
 /* header  */
 .hd{
     padding: 20px 0; background: white;
-    width: 100%; position: fixed; z-index: 999;
+    width: 100%; z-index: 99;
     box-shadow: 0 0 20px rgba(0, 0, 0, 8);
-    position: relative;
+    position: fixed;
     top : 0;
+    /* border-bottom: 5px solid gray; */
+    /* position: relative; */
     }
+    
+
+    
 .hd .navWrap{
     height: 35px;
     
@@ -40,6 +45,122 @@ body {
     text-align: center;
     }
 
+
+/* subMenu  */
+
+/* 포지션 값을 주기위해서 sCon에다가 relative를주고
+ subMenu에게 absolute값을 줘서 관리해보려고 했다.
+ 그러자 가로가 되어서 인라인 블록 값까지 줘보았지만
+ 숨겨놨던 서브메뉴가 튀어나왔고, 호버를 했을때도 메뉴가 튀어나왔다
+ 이중적으로 나왔다는 의미임. 
+ 1. subMenu>li를 한번 더 감싸서 조종해야하나?
+ 2. 포지션 값을 주면 레이아웃이 망가지는 이유는?
+ 
+ 포지션 값을 주면 border-bottom 값은 원하는대로 지정할 수 있지만
+ 서브메뉴의 리스트가 가로로 나와서 문제임.
+ 아 왜 다 안뜨냐?*/
+
+#Scon{
+    position: relative;
+    height: 300px;
+}
+
+#sCon li a:hover{
+    border: 1px;
+}
+
+#sCon > li:hover{
+    /* border-bottom: 2px solid #ffd44a; */
+    /* 위에 코드를 실행시키면 패딩-바텀때문에 맨~밑에 선이 옴 */
+    padding-bottom: 50%;
+    display: block;
+}
+
+/*문제점 원래는 글자 밑에다가 선을 그려넣기 위해서 쓴거였음
+근데 블록값이랑 패딩 바텀값을 주면서 그만큼 내려왔다.
+이걸 어떻게 수정해야할지 좀 감이 안옴. 선도 넣어야하는데
+호버를 하면 저만큼 내려가있으니 선도 맨밑으로 가있을텐데...*/
+
+
+
+#sCon li:hover>a{
+    border-bottom: none;
+}
+
+
+#sCon li ul li{
+    padding: 10px 0;
+}
+
+#sCon > li:hover ul{
+    display: block;
+    /* background: white; */
+}
+
+#sCon li .subMenu {
+    display: none; /*얘를 통해서 서브메뉴를 감춰두는거임*/
+    transform: translateY(-30px);
+    width: 100%; /*가로 100*/
+    /* height: 200px; */
+    top : 76px;
+    padding-top: 40px;
+    /* position: absolute; */
+    
+}
+
+/* #sCon li .subMenu:hover{
+
+} */
+
+#sCon li ul{
+    width: 100%;
+}
+
+/* #sCon > li a:after{
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background: #ffd44a;
+
+} */
+/* 내가 원했던 것은 재단소개를 가지고 있는 ul에 after 값을 줘서 밑에 선을 나오게 하고 싶었음
+어떤선이냐면 홈페이지에 나오는데, 서브메뉴가 뜨면서 회색 선이 하나 있는데 그걸 만들어보고싶었음.
+아... 다른걸 만들고있었네? */
+
+
+/* #sCon > li a{
+    border-bottom: 1px solid gray;
+} */
+
+
+#sCon li:hover ul a{
+    display: block;
+    padding: 2px 0;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    background: white;
+} 
+
+/* 
+.navWrap:hover #sCon ul a{
+    display: block;
+    padding: 2px 0;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    background: white;
+
+} */
+
+/*나는 navWrap의 어느곳을 건드리든 hover 반응을 넣고싶었지만
+실패했다. 죽어도 submenu 밖에 안먹음 아직도 많이 부족하다.*/
+
+
+
+
+/* Banner  */
 
 .slideWrap {
     margin-bottom: 150px;
@@ -236,19 +357,36 @@ body {
     background: #F7F8F9;
     float:right; 
     padding: 20px;
-    border: none;   
-    
+    border: none;
+    padding: 20px;
 }
 
-/* .nTab button {
-    padding : 0 10px;
-} */
 
 .notice .swiper-slide{
     height: 465px;
     background: white;
-    border: 1px solid black;
 }
+
+.notice .nWrap {
+   padding: 150px 0;
+   position: relative;
+}
+
+.notice .nWrap h1{
+    font-size : 44px;
+}
+
+.nWrap .nTitle:after{
+    content:"";
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    background: #ffd44a;
+
+}
+
+
+
 
 .notice .swiper-slide h3 {
     display: flex;
@@ -268,7 +406,20 @@ body {
     width: 100%;
 }
 
+.swiper{
+    overflow: visible;
+    object-fit: cover;
+}
 
+.swiper-wrapper .swiper-slide{
+    transition: 0.7s;
+}
+
+.notice .swiper-slide:hover{
+    transform : translateY(-20px);
+    cursor: pointer;
+    box-shadow: 5px 5px 5px gray;
+}
 
 
 
