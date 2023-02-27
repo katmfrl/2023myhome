@@ -60,21 +60,27 @@ body {
  서브메뉴의 리스트가 가로로 나와서 문제임.
  아 왜 다 안뜨냐?*/
 
-#Scon{
+#sCon{
     position: relative;
+
+}
+
+#sCon:hover{
+    display: block;
     height: 300px;
+    cursor: pointer;
 }
 
-#sCon li a:hover{
-    border: 1px;
-}
+/* #sCon li a:hover{
+    border-bottom: 1px solid #ffD442;
+} */
 
-#sCon > li:hover{
+/* #sCon > li:hover{ */
     /* border-bottom: 2px solid #ffd44a; */
     /* 위에 코드를 실행시키면 패딩-바텀때문에 맨~밑에 선이 옴 */
-    padding-bottom: 50%;
+    /* padding-bottom: 50%;
     display: block;
-}
+} */
 
 /*문제점 원래는 글자 밑에다가 선을 그려넣기 위해서 쓴거였음
 근데 블록값이랑 패딩 바텀값을 주면서 그만큼 내려왔다.
@@ -82,10 +88,6 @@ body {
 호버를 하면 저만큼 내려가있으니 선도 맨밑으로 가있을텐데...*/
 
 
-
-#sCon li:hover>a{
-    border-bottom: none;
-}
 
 
 #sCon li ul li{
@@ -100,7 +102,7 @@ body {
 #sCon li .subMenu {
     display: none; /*얘를 통해서 서브메뉴를 감춰두는거임*/
     transform: translateY(-30px);
-    width: 100%; /*가로 100*/
+    width: 100%;
     /* height: 200px; */
     top : 76px;
     padding-top: 40px;
@@ -111,19 +113,21 @@ body {
 /* #sCon li .subMenu:hover{
 
 } */
-
+/* 
 #sCon li ul{
     width: 100%;
-}
+} */
 
-/* #sCon > li a:after{
+#sCon:hover li:after{
     content:"";
     position: absolute;
-    width: 100px;
-    height: 5px;
-    background: #ffd44a;
+    width: 50px;
+    height: 3px;
+    /* background: #ffd44a; */
+    top : 50px;
+    left : 55px
 
-} */
+}
 /* 내가 원했던 것은 재단소개를 가지고 있는 ul에 after 값을 줘서 밑에 선을 나오게 하고 싶었음
 어떤선이냐면 홈페이지에 나오는데, 서브메뉴가 뜨면서 회색 선이 하나 있는데 그걸 만들어보고싶었음.
 아... 다른걸 만들고있었네? */
@@ -358,7 +362,6 @@ body {
     float:right; 
     padding: 20px;
     border: none;
-    padding: 20px;
 }
 
 
