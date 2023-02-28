@@ -129,57 +129,59 @@
                 <button>뉴스룸</button>
                 <button>공지사항</button>
             </div>
-            <div class="swiper mySwiper container"> <!--스와이프-->
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <h3>넷마블문화재단 사업기획 및 운영<br>담당자 모집</h3>
-                        <p class = "pTitle" >넷마블문화재단에서 아래와 같이 새로운 직원을<br> 모집합니다</p>
-                        <!-- <p class = "pBot">공지사항 • 2023.01.26 </p> -->
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="sWrap">
-                            <div class="imgWrap">
-                                <img src="images/main/notice01.jpg" alt="">
+
+
+            <!-- swipe  -->
+            <div class="sWrap container">
+                <div class="swiper mySwiper"> <!--스와이프-->
+                    <div class="swiper-wrapper">
+                        <!-- swipe1 시작 -->
+                        <div class="swiper-slide">
+                            <div class="itemWrap"> <!--img h p 태그를 한대묶음-->
+                                <!-- <div class="imgWrap"></div> -->
+                                <div class="tWrap">
+                                    <h3>넷마블문화재단 사업기획 및 운영<br>담당자 모집</h3>
+                                    <p>넷마블문화재단에서 아래와 같이 새로운 직원을<br> 모집합니다</p>
+                                    <!-- <p class = "pBot">공지사항 • 2023.01.26 </p> -->
+                                </div>
                             </div>
-                            <div class="nTextWrap">
-                                <h3>2022년 기부금품 모집완료내역 보고</h3>
-                                <p>재단법인 넷마블문화재단은 '기부금품의 모집 및 사용에 관한 법률'에 의거하여 기부금품 모집 내역...</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="itemWrap"> <!--img h p 태그를 한대묶음-->
+                                <!-- <div class="imgWrap"></div> -->
+                                <div class="tWrap">
+                                    <h3>넷마블문화재단 사업기획 및 운영<br>담당자 모집</h3>
+                                    <p>넷마블문화재단에서 아래와 같이 새로운 직원을<br> 모집합니다</p>
+                                    <!-- <p class = "pBot">공지사항 • 2023.01.26 </p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="itemWrap"> <!--img h p 태그를 한대묶음-->
+                                <!-- <div class="imgWrap"></div> -->
+                                <div class="tWrap">
+                                    <h3>넷마블문화재단 사업기획 및 운영<br>담당자 모집</h3>
+                                    <p>넷마블문화재단에서 아래와 같이 새로운 직원을<br> 모집합니다</p>
+                                    <!-- <p class = "pBot">공지사항 • 2023.01.26 </p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="itemWrap"> <!--img h p 태그를 한대묶음-->
+                                <!-- <div class="imgWrap"></div> -->
+                                <div class="tWrap">
+                                    <h3>넷마블문화재단 사업기획 및 운영<br>담당자 모집</h3>
+                                    <p>넷마블문화재단에서 아래와 같이 새로운 직원을<br> 모집합니다</p>
+                                    <!-- <p class = "pBot">공지사항 • 2023.01.26 </p> -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="imgWrap">
-                            <img src="images/main/notice02.jpg" alt="">
-                        </div>
-                        <h3>2022 함께하는 게임소통학교 모집(심화교육)</h3>
-                        <p>교육 신청 링크</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="imgWrap">
-                            <img src="images/main/notice03.jpg" alt="">
-                        </div>
-                        <h3>제14회 게임콘서트 개최 안내</h3>
-                        <p>9월 게임콘서트 참여하기 링크</p>
-                    </div>
-                    <div class="swiper-slide">    
-                        <div class="imgWrap">
-                            <img src="images/main/notice04.jpg" alt="">
-                        </div>
-                        <h3>넷마블게임박물관 건립준비캠페인</h3>
-                        <p></p></div>
-                    <div class="swiper-slide">
-                        <div class="imgWrap">
-                            <img src="images/main/notice05.jpg" alt="">
-                        </div>
-                        <h3>[게임소통학교] 도미노 영상 이벤트 결과 발표</h3>
-                        <p></p>
-                    </div>
-                  </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
     </div>
-
-
     <footer class = "ft">
             <div class="ftlogo container">
                 <a href="#"><img src="images/main/netft_logo.png" alt=""></a>
@@ -238,16 +240,16 @@
 
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
-      spaceBetween: 20,
-      loop:true,
+      spaceBetween: 30,
+    //   loop:true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //   },
     });
 
     </script>
